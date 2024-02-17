@@ -1,5 +1,5 @@
 
-function ExpenseDetail(props) {
+const ExpenseDetail = (props) => {
 
     return (
         <div className="expense-item__description">
