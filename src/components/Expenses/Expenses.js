@@ -9,8 +9,8 @@ const Expenses = (props) => {
     const expenses = props.expenses;
     const [filteredYear, setFilteredYear] = useState('2020');
 
-    const filterChangeHandler = (event) => {
-        setFilteredYear(filteredYear);
+    const filterChangeHandler = (selectedYear) => {
+        setFilteredYear(selectedYear);
     }
 
     return (
@@ -18,7 +18,7 @@ const Expenses = (props) => {
             <ExpenseFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
             {expenses.map((expense) => (
                 <ExpenseItem
-                    id={expense.id}
+                    key={expense.id}
                     title={expense.title}
                     amount={expense.amount}
                     date={expense.date}
