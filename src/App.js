@@ -25,6 +25,14 @@ const DUMMY_EXPENSES = [
     date: new Date(2022, 5, 12),
     locationOfExpenditure: "Ikea",
   },
+  {
+    id: "e5",
+    title: "Gaming Laptop(MSI)",
+    amount: 999,
+    date: new Date(2022, 11, 5),
+    locationOfExpenditure: "MSI",
+  }
+
 ];
 
 const App = () => {
@@ -41,7 +49,7 @@ const App = () => {
   return (
 
     <div >
-      <h2>Let's get started!</h2>
+      {/* <h2>Let's get started!</h2> */}
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses expenses={expenses} />
     </div>
